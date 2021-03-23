@@ -1,9 +1,10 @@
 import React from 'react';
  
 const Test = () =>  {
-  const rootElem = document.querySelectorAll('.reddit_widget')
+  const rootElem = document.querySelectorAll('.majescoReact')
+  const { data: { testProp, testPropArr } } = rootElem
   console.log('ROOTELEM', rootElem)
-  return <p>This is a test component for MajescoPOC</p>;
+  return <p>{rootElem}</p>;
 }
  
 
