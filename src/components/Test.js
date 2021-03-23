@@ -1,10 +1,10 @@
 import React from 'react';
  
-const Test = () =>  {
-  const rootElem = document.querySelectorAll('.majescoReact')
-  const { data: { testProp, testPropArr } } = rootElem
-  console.log('ROOTELEM', rootElem)
-  return <p>{rootElem}</p>;
+const Test = ({ domElem }) =>  {
+
+  const { data: { testProp, testPropArr } } = domElem
+  console.log('ROOTELEM', domElem)
+  return <p>{testProp}</p>;
 }
  
 
