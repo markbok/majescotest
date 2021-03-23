@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 const rootElem = document.querySelectorAll('.majescoReact')
-ReactDOM.render(
-  <React.StrictMode>
-    <App domElem={rootElem}/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
+rootElem.forEach(Root => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App domElement={Root} />
+    </React.StrictMode>,
+    Root
+  );
+})
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
